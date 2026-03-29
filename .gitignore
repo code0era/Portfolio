@@ -1,2 +1,34 @@
+# Dependencies
 node_modules/
+**/node_modules/
+
+# Environment variables (NEVER commit these)
 .env
+.env.local
+.env.production
+.env.development
+**/.env
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
