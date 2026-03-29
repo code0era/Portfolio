@@ -134,6 +134,12 @@ app.post("/api/chat", (req, res) => {
   res.json({ response, action });
 });
 
-app.listen(PORT, () => {
-  console.log(`Portfolio server running on http://localhost:${PORT}`);
-});
+// Local development: start the server
+// On Vercel: the app is exported as a serverless function
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Portfolio server running on http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
